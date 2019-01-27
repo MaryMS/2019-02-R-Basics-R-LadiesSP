@@ -5,6 +5,7 @@ subtitle: <br>R-Ladies São Paulo</br>
 date: "02/02/2019"
 output:
   xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
     css: [default, rladies, robot-fonts]
     lib_dir: libs
     nature:
