@@ -4,16 +4,102 @@ subtitle: <br>R-Ladies São Paulo</br>
 #author: "Maria Marinho"
 date: "02/02/2019"
 output:
-  xaringan::moon_reader:
+  xaringan::moon_reader: 
     css: [default, rladies, robot-fonts]
     lib_dir: libs
+    chacra: remark.js
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+```
+
+
+class:  center, middle
+# What is R-Ladies?
+
+Worldwide organization that  promotes **gender diversity** in the R community. 
+
+# How?
+
+Meetups and mentorship in a friendly and safe environment. 
+
+
+# For whom?
+Underrepresented genders - including but not limited to cis/trans women, trans men, non-binary, genderqueer, agender
+
+
+Reference: [About us - R-Ladies](https://rladies.org/about-us/)
+
+---
+class:   center, middle
+# Mission 
+
+As a diversity initiative, the mission of R-Ladies is to achieve proportionate representation by encouraging, inspiring, and empowering people of genders currently underrepresented in the R community.
+
+
+Reference: [About us - R-Ladies](https://rladies.org/about-us/)
+
+
+---
+class:   center, middle
+# How did R-Ladies begin?
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("img/gabriela.jpeg")
+```
+**[Gabriela de Queiroz](https://github.com/gdequeiroz)** founded R-Ladies on **October 1, 2012**. She wanted to give back to the community after going to several meetups and learning a lot for free.  The first meetup was placed in **San Francisco, California (United States)**. In the following years more R-Ladies chapters started around the globe. 
+
+Reference: [About us - R-Ladies](https://rladies.org/about-us/history/)
+
+---
+class:center, middle
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/shiny.png")
+```
+
+
+Reference: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/)  (03/12/2018)
+
+---
+class:   center, middle
+# Code of conduct
+
+R-Ladies is dedicated to providing a harassment-free experience for everyone. We do not tolerate harassment of participants in any form.
+
+
+[R-Ladies Code of Conduct](https://rladies.org/code-of-conduct/)
+
+
+---
+class:  center, middle
+# How to get involved
+
+[Meetup](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+
+Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal)
+
+Website: [https://rladies.org/](https://rladies.org/)
+
+R-Ladies LATAM Blog (Latin America) - Comming soon!
+
+
+[R-Ladies - How do get involved](https://rladies.org/about-us/help/)
+
+---
+class:   center, middle
 
 ### R-Ladies São Paulo
+
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/1meetupsp.jpeg")
+```
+**First R-Ladies São Paulo Meetup**
 
 
 ---
@@ -56,6 +142,22 @@ class: middle
 
 ######Fonte: slide do Randy Lao na Conferência Data Science Go 2018
 
+---
+## O que é o R?
+
+> R is a free software environment for statistical computing and graphics. (https://www.r-project.org/)
+
+> R é um ambiente de software livre para computação estatística e gráficos.
+
+
+* O R é open-source;
+
+* Muito usado por cientistas de dados, estatísticos e pesquisadores.
+
+
+```{r echo=FALSE, out.width="40%"}
+knitr::include_graphics("img/Rlogo.png")
+```
 ---
 
 ### Por que usar o R?
@@ -756,22 +858,6 @@ nome <- df_titanic %>% filter(str_detect(nome, "Elizabeth"))
 
 ---
 
-### Desafio 1 - Resposta
-
-1) Criar um objeto chamado passageiras que seleciona somente as passageiras.
-
-```{r, message=FALSE}
-passageiras <- df_titanic %>%  filter(sexo == "feminino")
-```
-
-2) Criar um objeto chamado criancas_Cherbourg que seleciona as crianças com menos de 12 anos que embarcaram na cidade de Cherbourg.
-
-```{r, message=FALSE}
-criancas_Cherbourg <- df_titanic %>% filter(idade < 12 & embarque == "Cherbourg")
-```
-
----
-
 ### arrange
 
 Ordenar as linhas da base de dados conforme uma ou mais variáveis.
@@ -812,24 +898,6 @@ df_titanic  %>%
 1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
 
 2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
-
----
-
-### Desafio 2 - Resposta
-
-1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
-
-```{r}
-passageiros <- df_titanic %>% arrange(desc(classe))
-```
-
-2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
-
-```{r}
-mulheres <- df_titanic %>% 
-  filter(sexo == "feminino") %>% 
-  arrange(idade)
-```
 
 ---
 
@@ -882,27 +950,6 @@ df_titanic %>%  select(-id_passageiro, -nome)
 
 ---
 
-
-### Desafio 3 - Resposta
-
-1) Criar um objeto para salvar o resultado com as colunas nome, tarifa e classe.
-
-```{r}
-tarifa <- df_titanic %>% select(nome, tarifa, classe)
-```
-
-
-2) Mostrar uma tabela com as tarifas maiores que 50 por ordem decrescente de tarifa e ordem crescente de classe. A tabela não deverá conter os campos irmaos_conjuge, pais_criancas e passagem.
-
-```{r}
-tarifa_classe <- df_titanic %>% 
-  filter(tarifa > 50) %>% 
-  select(-irmaos_conjuge, -starts_with("p")) %>% 
-  arrange(desc(tarifa), classe)
-```
-
----
-
 ### mutate
 
 Criar ou modificar colunas de uma base de dados.
@@ -935,19 +982,6 @@ tarifa_conversao
 
 Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
 Classifique por ordem decrescente de tarifa.
-
----
-
-### Desafio 4 - Resposta
-
-Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
-Classifique por ordem decrescente de tarifa.
-
-```{r}
-tarifa_conversao <- df_titanic %>% 
-  mutate(tarifa_dolar = tarifa * 1.31) %>% 
-  arrange(desc(tarifa))
-```
 
 ---
 
@@ -1003,26 +1037,6 @@ df_titanic %>%
 
 ---
 
-### Desafio 5 - Resposta
-
-1) Calcular a média da tarifa.
-
-```{r}
-media_tarifa <- df_titanic %>% summarize(mean(tarifa, na.rm=TRUE))
-```
-
-2) Filtrar as passageiras mulheres e calcular a mediana da tarifa.
-
-```{r}
-mulheres_tarifa <- df_titanic %>% 
-  filter(sexo == "feminino") %>% 
-  summarize(
-    mediana_tarifa = median(tarifa, na.rm = TRUE)
-)
-```
-
----
-
 ### group_by + summarize
 
 Agrupa as colunas de uma base de dados. 
@@ -1055,30 +1069,6 @@ df_titanic %>%
 1) Criar uma tabela com a quantidade de pessoas por classe.
 
 2) Criar uma tabela com a mediana da tarifa por sexo.
-
----
-
-### Desafio 6 - Resposta
-
-1) Criar uma tabela com a quantidade de pessoas por classe.
-  
-```{r}
-df_titanic %>% 
-  group_by(classe) %>% 
-  summarize(qtd_classe = n())
-```
-
----
-
-### Desafio 6  - Resposta
-
-2) Criar uma tabela com a mediana da tarifa por sexo.
-
-```{r}
-df_titanic %>% 
-  group_by(sexo) %>% 
-  summarize(mediana_tarifa = median(tarifa, na.rm = TRUE))
-```
 
 ---
 
