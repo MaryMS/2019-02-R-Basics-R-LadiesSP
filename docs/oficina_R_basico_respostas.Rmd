@@ -1,5 +1,5 @@
 ---
-title: "Oficina de R Básico"
+title: "Oficina de R - Básico"
 subtitle: <br>R-Ladies São Paulo</br>
 #author: "Maria Marinho"
 date: "02/02/2019"
