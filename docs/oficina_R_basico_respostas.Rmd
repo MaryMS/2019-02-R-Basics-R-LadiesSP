@@ -170,7 +170,7 @@ knitr::include_graphics("img/Rlogo.png")
 
 - Está disponível em diferentes plataformas: Windows, Linux e Mac
 ---
-## O que podemos fazer com o R?
+# O que podemos fazer com o R?
 
 * Análise de dados - Estatística, modelagem, etc.
 
@@ -258,7 +258,7 @@ knitr::include_graphics("img/RStudio_screen.png")
 ```
 
 ---
-## Projetos
+# Projetos
 
 > "A good project layout will ultimately make your life easier: It will help ensure the integrity of your data; It makes it simpler to share your code with someone else (a lab-mate, collaborator, or supervisor); It allows you to easily upload your code with your manuscript submission; It makes it easier to pick the project back up after a break."
     
@@ -268,7 +268,7 @@ knitr::include_graphics("img/RStudio_screen.png")
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
 
 ---
-## Boas práticas para organizar seu projeto
+# Boas práticas para organizar seu projeto
 
 
 > 1. **Tratar dados como somente leitura: **esse é provavelmente o objetivo mais importante da configuração de um projeto. Os dados geralmente consomem tempo e/ou são caros para coletar. Trabalhar com eles interativamente (por exemplo, no Excel), onde eles podem ser modificados, significa que você nunca tem certeza de onde os dados vieram, ou como eles foram modificados desde a coleta. Portanto, é uma boa ideia tratar seus dados como “somente leitura”.
@@ -279,7 +279,7 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
 ---
 
-## Criando um projeto
+# Criando um projeto
 
 1. Clique na opção **“File”** do menu, e então em **“New Project”**.
 
@@ -296,13 +296,13 @@ OBS: Crie um novo script para escrever seus códigos!
   **File -> New File -> RScript **
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="100%"}
 knitr::include_graphics("img/01-rstudio.png")
 ```
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="100%"}
 knitr::include_graphics("img/01-rstudio-script.png")
 ```
@@ -310,56 +310,56 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio
 
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee1.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee2.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee3.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee4.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee5.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee6.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee7.jpg")
 ```
 Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
-## RStudio
+# RStudio
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/haydee8.jpg")
 ```
@@ -382,7 +382,7 @@ help(sum)
 
 ---
 
-### Pacotes no R
+# Pacotes no R
 
 **Pacotes** são coleções de funções, dados e documentação que estendem as capacidades do R básico.
 
@@ -392,7 +392,7 @@ Eles precisam ser instalados e carregados.
 
 ---
 
-### Instalação de Pacotes:
+## Instalação de Pacotes:
 
 - Via CRAN: install.packages("nome-do-pacote").
 
@@ -407,7 +407,7 @@ devtools::install_github("tidyverse/dplyr")
 ```
 
 
-### Carregar pacotes:
+## Carregar pacotes:
 
 - library(nome-do-pacote)
 
@@ -417,7 +417,7 @@ library(tidyverse)
 
 ---
 
-### Dicas sobre Pacotes
+# Dicas sobre Pacotes
 
 1. Você só precisa instalar o pacote uma vez, mas precisa carregá-lo sempre que começar uma nova sessão;
 
@@ -448,7 +448,7 @@ Os atalhos facilitam. Veja os principais:<br></br>
 
 ---
 
-### R como calculadora
+# R como calculadora
 
 ```{r}
 2 + 5    # adição
@@ -459,7 +459,7 @@ Os atalhos facilitam. Veja os principais:<br></br>
 
 ---
 
-### R como calculadora
+# R como calculadora
 
 ```{r}
 9 %% 4   # resto da divisão de 9 por 4
@@ -471,7 +471,7 @@ sqrt(1024) # radiciação
 
 A ordem matemática das operações também vale no R.
 ---
-## Funções matemáticas
+# Funções matemáticas
 
 ```{r}
 sin(1)  # trigonometry functions
@@ -487,7 +487,7 @@ exp(0.5) # e^(1/2)
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
 ---
 
-### Nomes de objetos e variáveis
+# Nomes de objetos e variáveis
 
 - Os nomes devem começar com uma letra. Podem conter letras, números, _ e .<br></br>
 - Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).<br></br>
@@ -496,7 +496,7 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio
 
 ---
 
-### Criando objetos no R
+# Criando objetos no R
 
 - Para atribuir um valor a um objeto no R, utilizamos o operador **<-**  <br></br>
 - O atalho ALT + **-** gera o operador **<-** <br></br>
@@ -506,7 +506,7 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio
 
 ---
 
-#### Exemplos de objetos e atribuição de valores
+# Exemplos de objetos e atribuição de valores
 
 ```{r}
 nome_empregado <- "Tom Cruise de Souza e Silva"
@@ -521,7 +521,7 @@ ativo
 
 ---
 
-### Classes Básicas ou Atômicas do R
+# Classes Básicas ou Atômicas do R
 
 - **Character**: texto <br></br>
 - **Integer**: números inteiros <br></br>
@@ -532,7 +532,7 @@ ativo
 
 ---
 
-#### Exemplos: character
+# Exemplos: character
 
 ```{r}
 "escola"
@@ -542,7 +542,7 @@ ativo
 
 ---
 
-#### Exemplos: integer
+# Exemplos: integer
 
 ```{r}
 10L #Um número inteiro pode ser representado acompanhado de um L
@@ -551,7 +551,7 @@ ativo
 
 ---
 
-#### Exemplos: numeric
+# Exemplos: numeric
 
 ```{r}
 10
@@ -560,14 +560,14 @@ ativo
 ```
 
 ---
-#### Exemplos: complex
+# Exemplos: complex
 ```{r}
 4 + 9i
 ```
 
 ---
 
-#### Exemplos: logical
+# Exemplos: logical
 ```{r}
 TRUE
 FALSE
@@ -575,7 +575,7 @@ FALSE
 
 ---
 
-#### Exemplos: factor
+# Exemplos: factor
 
 
 ```{r}
@@ -595,7 +595,7 @@ Essa classe de dados pode ser trabalhada com o pacote **forcats**.
 
 ---
 
-#### Função class: 
+# Função class: 
 
 A função **class** mostra a classe de um objeto.
 
@@ -610,7 +610,7 @@ class(ano)
 
 ---
 
-#### Função class
+# Função class
 
 ```{r}
 motor <- 1.5
@@ -620,7 +620,7 @@ class(passou_enem)
 ```
 ---
 
-### Tipos de objetos:
+# Tipos de objetos:
 
 - **Vector**: armazena elementos de mesma classe. <br></br>   
 - **Matrix**: vetores de duas dimensões que armazenam elementos de mesma classe. <br></br>
@@ -629,7 +629,7 @@ class(passou_enem)
 
 ---
 
-#### Exemplo: Vector
+# Exemplo: Vector
 
 A função c() cria um vetor.
 ```{r}
@@ -651,7 +651,7 @@ vetor1 * vetor2
 
 ---
 
-#### Exemplo: Matrix
+# Exemplo: Matrix
 
 A função matrix() cria uma matriz.
 ```{r}
@@ -666,7 +666,7 @@ dim(primeira_matriz)
 
 ---
 
-#### Exemplo: List
+# Exemplo: List
 
 A função list() cria uma lista.
 ```{r}
@@ -684,7 +684,7 @@ is.list(harry_friends)
 
 ---
 
-#### Exemplo: Data.frame
+# Exemplo: Data.frame
 
 
 A função head() mostra as primeiras 6 linhas do dataframe.
@@ -708,7 +708,7 @@ Fonte: [Data Science with R by Garrett Grolemund](http://garrettgman.github.io/t
 ---
 
 
-#### Funções úteis para trabalhar com dataframes
+# Funções úteis para trabalhar com dataframes
 
 - tail(): mostra as últimas 6 linhas.
 
@@ -718,7 +718,7 @@ Fonte: [Data Science with R by Garrett Grolemund](http://garrettgman.github.io/t
 
 ---
 
-### Conversão de classes: 
+# Conversão de classes: 
 
 Podemos forçar um objeto a ser de uma classe específica com as funções:  
 - as.character() <br></br>
@@ -728,7 +728,7 @@ Podemos forçar um objeto a ser de uma classe específica com as funções:
 
 ---
 
-#### Exemplo de conversão de classes
+# Exemplo de conversão de classes
 
 ```{r}
 vetor <- 0:9
@@ -742,7 +742,7 @@ class(vetor_numeric)
 
 ---
 
-#### Exemplo de conversão de classes
+# Exemplo de conversão de classes
 
 ```{r}
 vetor_character <- as.character(vetor)
@@ -757,7 +757,7 @@ class(vetor_logical)
 
 ---
 
-### Operadores Lógicos
+# Operadores Lógicos
 
 - Igual a: **==** <br></br>
 - Diferente de: **!=** <br></br>
@@ -771,7 +771,7 @@ class(vetor_logical)
 
 ---
 
-### NA
+# NA
 
 Uma característica importante do R que pode dificultar a comparação são os valores ausentes ou **NAs** (não disponíveis). 
 
@@ -779,7 +779,7 @@ Uma característica importante do R que pode dificultar a comparação são os v
 
 ---
 
-### NA
+# NA
 
 Quase qualquer operação envolvendo um valor desconhecido também será desconhecido:
 
@@ -792,7 +792,7 @@ NA / 2
 
 ---
 
-### NA
+# NA
 
 E o mais confuso:
 
@@ -806,7 +806,7 @@ NA == NA
 
 ---
 
-### Estrutura Condicional: IF
+# Estrutura Condicional: IF
 
 ```{r}
 mes <- "Novembro"
@@ -817,7 +817,7 @@ if(mes == "Novembro") {
 ```
 ---
 
-### Estrutura Condicional: IF e ELSE
+# Estrutura Condicional: IF e ELSE
 
 ```{r}
 mes <- "Dezembro"
@@ -834,7 +834,7 @@ if(mes == "Novembro") {
 
 ---
 
-### Estrutura de Repetição: FOR
+# Estrutura de Repetição: FOR
 
 Imprime os 10 primeiros nomes dos personagens da base starwars usando o laço for.
 ```{r}
@@ -854,7 +854,7 @@ class: center, middle
 
 ---
 
-### O Tidyverse
+# O Tidyverse
 
 É uma coleção de pacotes R projetados para a ciência de dados. Todos os pacotes compartilham uma mesma filosofia de desenvolvimento, sintaxe e estruturas de dados.
 
@@ -862,7 +862,7 @@ class: center, middle
 
 ---
 
-### Pacotes do Tidyverse
+# Pacotes do Tidyverse
 
 - **ggplot2**: cria gráficos <br></br>
 - **dplyr**: manipulação de dados <br></br>
@@ -877,7 +877,7 @@ class: center, middle
 
 ---
 
-### dplyr
+# dplyr
 
 A ideia do pacote **dplyr** é tornar a manipulação de dados explícita utilizando verbos que indicam a ação a ser realizada. 
 
@@ -887,7 +887,7 @@ O dplyr foi desenhado para trabalhar com o operator pipe **%>%** do pacote magri
 
 ---
 
-### Os 6 verbos do dplyr 
+# Os 6 verbos do dplyr 
 
 - **filter**(): seleciona linhas <br></br>
 - **arrange**(): ordena de acordo com uma ou mais colunas <br></br>
@@ -898,7 +898,7 @@ O dplyr foi desenhado para trabalhar com o operator pipe **%>%** do pacote magri
 
 ---
 
-### O operador %>%, o Pipe
+# O operador %>%, o Pipe
 
 Imagine uma receita que tenha as instruções: junte os ingredientes, misture e leve ao forno. Na forma usual do R, essas instruções provavelmente seriam assim:
 
@@ -918,7 +918,7 @@ Com o operador pipe seria algo assim:
   
 ---
 
-### O operador %>%, o Pipe
+# O operador %>%, o Pipe
 
 Para ficar mais fácil: pense no Pipe %>% como um operador que efetua as operações à direita nos valores que estão à esquerda.
 
@@ -928,7 +928,7 @@ Ou ainda, o operador %>%  passa o que está à esquerda como argumento para a op
 
 ---
 
-### Importação de arquivos
+# Importação de arquivos
 
 Pacote **readr**: funções para ler arquivos texto
 - read_csv
@@ -948,13 +948,13 @@ Pacote **haven**: funções para ler outros softwares estatísticos
 
 ---
 
-### E lá vamos nós!
+# E lá vamos nós!
 
 <center><img src="img/S5e27_T.V._typing.gif"></center> 
 
 ---
 
-### Instruções
+# Instruções
 
 - Abrir o RStudio da sua máquina <br></br>
 - Fazer o download da pasta: github.com/xxxx/xxxx <br></br>
@@ -964,7 +964,7 @@ Pacote **haven**: funções para ler outros softwares estatísticos
 
 ---
 
-### Importação de arquivos
+# Importação de arquivos
 
 ```{r, message=FALSE}
 library(tidyverse)
@@ -979,7 +979,7 @@ df_titanic <- read_csv("data/titanic.csv")
 
 ---
 
-### View e glimpse
+# View e glimpse
 
 - Para visualizar um objeto: **View**(nome-do-objeto)
 
@@ -991,7 +991,7 @@ df_titanic %>% glimpse()
 
 ---
 
-### filter
+# filter
 
 Selecionar linhas da base de dados.
 
@@ -1004,7 +1004,7 @@ df_titanic %>% filter(sobreviveu == "sim")
 
 ---
 
-### filter
+# filter
 
 ```{r, message=FALSE}
 # Cria um objeto e atribui a ele as linhas com os sobreviventes.
@@ -1030,7 +1030,7 @@ embarque <- df_titanic %>% filter(embarque %in% c("Southampton", "Queenstow"))
 
 ---
 
-### filter
+# filter
 
 ```{r, message=FALSE}
 # Pessoas sem informação de local de embarque.
@@ -1047,7 +1047,7 @@ nome <- df_titanic %>% filter(str_detect(nome, "Elizabeth"))
 
 ---
 
-### Desafio 1
+# Desafio 1
 
 1) Criar um objeto chamado passageiras que seleciona somente as passageiras.
 
@@ -1055,7 +1055,7 @@ nome <- df_titanic %>% filter(str_detect(nome, "Elizabeth"))
 
 ---
 
-### Desafio 1 - Resposta
+# Desafio 1 - Resposta
 
 1) Criar um objeto chamado passageiras que seleciona somente as passageiras.
 
@@ -1071,7 +1071,7 @@ criancas_Cherbourg <- df_titanic %>% filter(idade < 12 & embarque == "Cherbourg"
 
 ---
 
-### arrange
+# arrange
 
 Ordenar as linhas da base de dados conforme uma ou mais variáveis.
 
@@ -1083,7 +1083,7 @@ passageiros_ordenados
 
 ---
 
-### arrange 
+# arrange 
 
 É possível ordenar na ordem descrescente e também por mais de uma variável.
 
@@ -1095,7 +1095,7 @@ passageiros_ordenados
 
 ---
 
-### filter & arrange
+# filter & arrange
 
 ```{r}
 # Filtra os sobreviventes homens e ordena por classe.
@@ -1106,7 +1106,7 @@ df_titanic  %>%
 
 ---
 
-### Desafio 2
+# Desafio 2
 
 1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
 
@@ -1114,7 +1114,7 @@ df_titanic  %>%
 
 ---
 
-### Desafio 2 - Resposta
+# Desafio 2 - Resposta
 
 1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
 
@@ -1132,7 +1132,7 @@ mulheres <- df_titanic %>%
 
 ---
 
-### select
+# select
 
 Selecionar colunas (variáveis) da base de dados.
 
@@ -1143,7 +1143,7 @@ df_titanic %>% select(nome, idade, classe, embarque)
 
 ---
 
-### select
+# select
 
 O select tem várias funções úteis, como por exemplo:
 
@@ -1153,7 +1153,7 @@ O select tem várias funções úteis, como por exemplo:
 
 ---
 
-### select
+# select
 
 ```{r}
 # Seleciona as colunas que começam com "id".
@@ -1162,7 +1162,7 @@ df_titanic %>%  select(starts_with("id"))
 
 ---
 
-### select
+# select
 
 Ao inserir o caracter **-** na frente da coluna, você estará excluindo as colunas da seleção.
 
@@ -1172,7 +1172,7 @@ df_titanic %>%  select(-id_passageiro, -nome)
 
 ---
 
-### Desafio 3
+# Desafio 3
 
 
 1) Criar um objeto para salvar o resultado com as colunas nome, tarifa e classe.
@@ -1182,7 +1182,7 @@ df_titanic %>%  select(-id_passageiro, -nome)
 ---
 
 
-### Desafio 3 - Resposta
+# Desafio 3 - Resposta
 
 1) Criar um objeto para salvar o resultado com as colunas nome, tarifa e classe.
 
@@ -1202,7 +1202,7 @@ tarifa_classe <- df_titanic %>%
 
 ---
 
-### mutate
+# mutate
 
 Criar ou modificar colunas de uma base de dados.
 
@@ -1220,7 +1220,7 @@ tarifa_conversao <- df_titanic %>% mutate(tarifa = tarifa / 4.93)
 
 ---
 
-### mutate
+# mutate
 
 ```{r}
 # Cria no dataset uma nova variável chamada tarifa_reais.
@@ -1230,14 +1230,14 @@ tarifa_conversao
 
 ---
 
-### Desafio 4
+# Desafio 4
 
 Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
 Classifique por ordem decrescente de tarifa.
 
 ---
 
-### Desafio 4 - Resposta
+# Desafio 4 - Resposta
 
 Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
 Classifique por ordem decrescente de tarifa.
@@ -1250,7 +1250,7 @@ tarifa_conversao <- df_titanic %>%
 
 ---
 
-### summarize
+# summarize
 
 Sumariza colunas da base de dados, ou seja, resume os valores das colunas em um só valor,
 podendo ser a média, mediana, min, max, etc.
@@ -1264,7 +1264,7 @@ df_titanic %>% summarize(mean(idade, na.rm=TRUE))
 
 ---
 
-### summarize
+# summarize
 
 ```{r}
 # Calcula: número de mulheres, mediana geral da tarifa e número de passageiros.
@@ -1281,7 +1281,7 @@ df_titanic %>%
 
 ---
 
-### summarize
+# summarize
 
 ```{r}
 # Filtra os passageiros homens e calcula a mediana da tarifa.
@@ -1294,7 +1294,7 @@ df_titanic %>%
 
 ---
 
-### Desafio 5
+# Desafio 5
 
 1) Calcular a média da tarifa.
 
@@ -1302,7 +1302,7 @@ df_titanic %>%
 
 ---
 
-### Desafio 5 - Resposta
+# Desafio 5 - Resposta
 
 1) Calcular a média da tarifa.
 
@@ -1322,7 +1322,7 @@ mulheres_tarifa <- df_titanic %>%
 
 ---
 
-### group_by + summarize
+# group_by + summarize
 
 Agrupa as colunas de uma base de dados. 
 
@@ -1338,7 +1338,7 @@ df_titanic %>%
 
 ---
 
-### group_by + summarize 
+# group_by + summarize 
   
 ```{r}
 # Agrupa pelo local de embarque e calcula a mediana da tarifa de cada grupo.
@@ -1349,7 +1349,7 @@ df_titanic %>%
 
 ---
 
-### Desafios 6
+# Desafios 6
 
 1) Criar uma tabela com a quantidade de pessoas por classe.
 
@@ -1357,7 +1357,7 @@ df_titanic %>%
 
 ---
 
-### Desafio 6 - Resposta
+# Desafio 6 - Resposta
 
 1) Criar uma tabela com a quantidade de pessoas por classe.
   
@@ -1369,7 +1369,7 @@ df_titanic %>%
 
 ---
 
-### Desafio 6  - Resposta
+# Desafio 6  - Resposta
 
 2) Criar uma tabela com a mediana da tarifa por sexo.
 
@@ -1381,7 +1381,7 @@ df_titanic %>%
 
 ---
 
-### Join
+# Join
 
 Com o **dplyr** também é possível fazer joins.
 
@@ -1406,7 +1406,7 @@ knitr::include_graphics("img/ggplot2.png")
 
 ---
 
-### ggplot2 - o pacote dos gráficos
+# ggplot2 - o pacote dos gráficos
 
 ```{r echo=FALSE, out.width="50%"}
 knitr::include_graphics("img/ggplot_masterlist_23.png")
@@ -1420,7 +1420,7 @@ knitr::include_graphics("img/ggplot_masterlist_49.png")
 
 ---
 
-### RMarkdown
+# RMarkdown
 
 No R é possível criar documentos que podem, por exemplo, explicar os dados em textos e também apresentar os códigos e os resultados destes. Tudo em um só lugar.
 
@@ -1431,7 +1431,7 @@ O trecho de código do RMarkdown é chamado de **chunk**.
 Atalho para criar um chunck: CTRL + ALT + I
 ---
 
-### Para aprender mais
+# Para aprender mais
 
 - [Livro R for Data Science](https://r4ds.had.co.nz) <br></br>
 - [Material do Curso-R](https://www.curso-r.com/material/) <br></br>
@@ -1440,7 +1440,7 @@ Atalho para criar um chunck: CTRL + ALT + I
 
 ---
 
-### Referências
+# Referências
 
 - https://r4ds.had.co.nz
 
@@ -1467,8 +1467,8 @@ class: middle
 
 ---
 
-class: middle
+class: middle, inverse
 
-### Muito obrigada!
+# Muito obrigada!
 
 R-Ladies São Paulo
