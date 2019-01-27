@@ -481,7 +481,43 @@ sqrt(1024) # radiciação
 ```
 
 A ordem matemática das operações também vale no R.
+---
+## Funções matemáticas
 
+
+```r
+sin(1)  # trigonometry functions
+```
+
+```
+## [1] 0.841471
+```
+
+```r
+log(1)  # natural logarithm
+```
+
+```
+## [1] 0
+```
+
+```r
+log10(10) # base-10 logarithm
+```
+
+```
+## [1] 1
+```
+
+```r
+exp(0.5) # e^(1/2)
+```
+
+```
+## [1] 1.648721
+```
+
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
 ---
 
 ### Nomes de objetos e variáveis
@@ -878,7 +914,15 @@ head(df)
 
 **Tibble** é uma releitura moderna do data.frame.
 
+
 ---
+# Dataframes  - Tidy data
+
+&lt;img src="img/tidy-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Data Science with R by Garrett Grolemund](http://garrettgman.github.io/tidying/)
+---
+
 
 #### Funções úteis para trabalhar com dataframes
 
@@ -1908,11 +1952,25 @@ Com o **dplyr** também é possível fazer joins.
 [Fonte: @yutannihilation](https://twitter.com/yutannihilation/status/551572539697143808)
 
 ---
+# ggplot2 
+
+- É um pacote usado para visualização de dados.
+
+- É uma implementação da Grammar of Graphics de Leland Wilkinson - um esquema geral para visualização de dados que divide gráficos em componentes semânticos como escalas e camadas.
+
+- [Cheatsheet em português](https://www.rstudio.com/wp-content/uploads/2016/03/ggplot2-cheatsheet-portuguese.pdf)
+
+- Material interessante: [Code Your Graph - A Workshop on Visualizing Your Data with ggplotby Alison Presmanes Hill &amp; Julianne Myers](https://alison.rbind.io/html/jamboree_heart_ggplot.html)
+
+&lt;img src="img/ggplot2.png" width="241" style="display: block; margin: auto;" /&gt;
+
+---
 
 ### ggplot2 - o pacote dos gráficos
 
-&lt;img src= "img/ggplot_masterlist_23.png" style="width: 54%"&gt;
-&lt;img src= "img/ggplot_masterlist_49.png" style="width: 54%"&gt;
+&lt;img src="img/ggplot_masterlist_23.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/ggplot_masterlist_49.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 [Fonte: r-statistics.co](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
@@ -1941,12 +1999,19 @@ Atalho para criar um chunck: CTRL + ALT + I
 ### Referências
 
 - https://r4ds.had.co.nz
+
 - https://www.curso-r.com/material/
+
 - https://www.tidyverse.org
+
 - http://brunaw.com/slides/rladies-sp/13-08-2018/meetup.html#1
+
 - https://bookdown.org/wevsena/curso_r_tce/curso_r_tce.html
+
 - https://rstudio-pubs-static.s3.amazonaws.com/279878_c7634fb5fe9e40b7abc7c35aa724a2a0.html
+
 - https://analisereal.com/tag/introducao-a-analise-de-dados-com-o-r-2/
+
 - http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html
 
 A apresentação foi feita em [xaringan](https://github.com/yihui/xaringan), um pacote do R! :)
