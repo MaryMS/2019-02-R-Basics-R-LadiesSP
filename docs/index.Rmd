@@ -1,6 +1,7 @@
 ---
 title: "Oficina de R - Básico"
-subtitle: <br>R-Ladies São Paulo</br>
+subtitle: <br>R-Ladies São Paulo<br><br> [bit.ly/rladiesSP5](http://bit.ly/rladiesSP5)
+
 date: "02/02/2019"
 output:
   xaringan::moon_reader:
@@ -1538,6 +1539,10 @@ gapminder %>%
 - https://www.tidyverse.org
 
 - http://brunaw.com/slides/rladies-sp/13-08-2018/meetup.html#1
+
+- https://github.com/MaryMS/2018-11-R-Course-FatecZS
+
+- https://beatrizmilz.github.io/talk/oficina_intro_r_ufabc_2018/
 
 - https://bookdown.org/wevsena/curso_r_tce/curso_r_tce.html
 
