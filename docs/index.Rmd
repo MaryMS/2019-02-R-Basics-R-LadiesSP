@@ -1156,21 +1156,7 @@ nome <- df_titanic %>% filter(str_detect(nome, "Elizabeth"))
 
 ---
 
-# Desafio 1 - Resposta
 
-1) Criar um objeto chamado passageiras que seleciona somente as passageiras.
-
-```{r, message=FALSE}
-passageiras <- df_titanic %>%  filter(sexo == "feminino")
-```
-
-2) Criar um objeto chamado criancas_Cherbourg que seleciona as crianças com menos de 12 anos que embarcaram na cidade de Cherbourg.
-
-```{r, message=FALSE}
-criancas_Cherbourg <- df_titanic %>% filter(idade < 12 & embarque == "Cherbourg")
-```
-
----
 
 # arrange
 
@@ -1213,23 +1199,6 @@ df_titanic  %>%
 
 2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
 
----
-
-# Desafio 2 - Resposta
-
-1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
-
-```{r}
-passageiros <- df_titanic %>% arrange(desc(classe))
-```
-
-2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
-
-```{r}
-mulheres <- df_titanic %>% 
-  filter(sexo == "feminino") %>% 
-  arrange(idade)
-```
 
 ---
 
@@ -1280,26 +1249,7 @@ df_titanic %>%  select(-id_passageiro, -nome)
 
 2) Mostrar uma tabela com as tarifas maiores que 50 por ordem decrescente de tarifa e ordem crescente de classe. A tabela não deverá conter os campos irmaos_conjuge, pais_criancas e passagem.
 
----
 
-
-# Desafio 3 - Resposta
-
-1) Criar um objeto para salvar o resultado com as colunas nome, tarifa e classe.
-
-```{r}
-tarifa <- df_titanic %>% select(nome, tarifa, classe)
-```
-
-
-2) Mostrar uma tabela com as tarifas maiores que 50 por ordem decrescente de tarifa e ordem crescente de classe. A tabela não deverá conter os campos irmaos_conjuge, pais_criancas e passagem.
-
-```{r}
-tarifa_classe <- df_titanic %>% 
-  filter(tarifa > 50) %>% 
-  select(-irmaos_conjuge, -starts_with("p")) %>% 
-  arrange(desc(tarifa), classe)
-```
 
 ---
 
@@ -1336,18 +1286,6 @@ tarifa_conversao
 Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
 Classifique por ordem decrescente de tarifa.
 
----
-
-# Desafio 4 - Resposta
-
-Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
-Classifique por ordem decrescente de tarifa.
-
-```{r}
-tarifa_conversao <- df_titanic %>% 
-  mutate(tarifa_dolar = tarifa * 1.31) %>% 
-  arrange(desc(tarifa))
-```
 
 ---
 
@@ -1401,25 +1339,7 @@ df_titanic %>%
 
 2) Filtrar as passageiras mulheres e calcular a mediana da tarifa. 
 
----
 
-# Desafio 5 - Resposta
-
-1) Calcular a média da tarifa.
-
-```{r}
-media_tarifa <- df_titanic %>% summarize(mean(tarifa, na.rm=TRUE))
-```
-
-2) Filtrar as passageiras mulheres e calcular a mediana da tarifa.
-
-```{r}
-mulheres_tarifa <- df_titanic %>% 
-  filter(sexo == "feminino") %>% 
-  summarize(
-    mediana_tarifa = median(tarifa, na.rm = TRUE)
-)
-```
 
 ---
 
@@ -1456,29 +1376,10 @@ df_titanic %>%
 
 2) Criar uma tabela com a mediana da tarifa por sexo.
 
----
 
-# Desafio 6 - Resposta
 
-1) Criar uma tabela com a quantidade de pessoas por classe.
-  
-```{r}
-df_titanic %>% 
-  group_by(classe) %>% 
-  summarize(qtd_classe = n())
-```
 
----
 
-# Desafio 6  - Resposta
-
-2) Criar uma tabela com a mediana da tarifa por sexo.
-
-```{r}
-df_titanic %>% 
-  group_by(sexo) %>% 
-  summarize(mediana_tarifa = median(tarifa, na.rm = TRUE))
-```
 
 ---
 
