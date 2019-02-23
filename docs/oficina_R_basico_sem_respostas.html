@@ -13,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Oficina de R - Básico
-## <br>R-Ladies São Paulo<br><br> Apresentação com respostas
+## <br>R-Ladies São Paulo<br><br> <a href="http://bit.ly/rladiesSP5">bit.ly/rladiesSP5</a>
 ### 02/02/2019
 
 ---
@@ -1575,23 +1575,7 @@ nome &lt;- df_titanic %&gt;% filter(str_detect(nome, "Elizabeth"))
 
 ---
 
-# Desafio 1 - Resposta
 
-1) Criar um objeto chamado passageiras que seleciona somente as passageiras.
-
-
-```r
-passageiras &lt;- df_titanic %&gt;%  filter(sexo == "feminino")
-```
-
-2) Criar um objeto chamado criancas_Cherbourg que seleciona as crianças com menos de 12 anos que embarcaram na cidade de Cherbourg.
-
-
-```r
-criancas_Cherbourg &lt;- df_titanic %&gt;% filter(idade &lt; 12 &amp; embarque == "Cherbourg")
-```
-
----
 
 # arrange
 
@@ -1691,25 +1675,6 @@ df_titanic  %&gt;%
 
 2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
 
----
-
-# Desafio 2 - Resposta
-
-1) Ordenar os passageiros por ordem decrescente de classe e nomeie o objeto.
-
-
-```r
-passageiros &lt;- df_titanic %&gt;% arrange(desc(classe))
-```
-
-2) Ordenar somente as passageiras por ordem de idade e dê um nome para o objeto.
-
-
-```r
-mulheres &lt;- df_titanic %&gt;% 
-  filter(sexo == "feminino") %&gt;% 
-  arrange(idade)
-```
 
 ---
 
@@ -1815,28 +1780,7 @@ df_titanic %&gt;%  select(-id_passageiro, -nome)
 
 2) Mostrar uma tabela com as tarifas maiores que 50 por ordem decrescente de tarifa e ordem crescente de classe. A tabela não deverá conter os campos irmaos_conjuge, pais_criancas e passagem.
 
----
 
-
-# Desafio 3 - Resposta
-
-1) Criar um objeto para salvar o resultado com as colunas nome, tarifa e classe.
-
-
-```r
-tarifa &lt;- df_titanic %&gt;% select(nome, tarifa, classe)
-```
-
-
-2) Mostrar uma tabela com as tarifas maiores que 50 por ordem decrescente de tarifa e ordem crescente de classe. A tabela não deverá conter os campos irmaos_conjuge, pais_criancas e passagem.
-
-
-```r
-tarifa_classe &lt;- df_titanic %&gt;% 
-  filter(tarifa &gt; 50) %&gt;% 
-  select(-irmaos_conjuge, -starts_with("p")) %&gt;% 
-  arrange(desc(tarifa), classe)
-```
 
 ---
 
@@ -1894,19 +1838,6 @@ tarifa_conversao
 Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
 Classifique por ordem decrescente de tarifa.
 
----
-
-# Desafio 4 - Resposta
-
-Criar uma tabela com um novo campo que contenha a tarifa em dólar seguindo essa cotação: 1£ = $ 1.31.
-Classifique por ordem decrescente de tarifa.
-
-
-```r
-tarifa_conversao &lt;- df_titanic %&gt;% 
-  mutate(tarifa_dolar = tarifa * 1.31) %&gt;% 
-  arrange(desc(tarifa))
-```
 
 ---
 
@@ -1983,27 +1914,7 @@ df_titanic %&gt;%
 
 2) Filtrar as passageiras mulheres e calcular a mediana da tarifa. 
 
----
 
-# Desafio 5 - Resposta
-
-1) Calcular a média da tarifa.
-
-
-```r
-media_tarifa &lt;- df_titanic %&gt;% summarize(mean(tarifa, na.rm=TRUE))
-```
-
-2) Filtrar as passageiras mulheres e calcular a mediana da tarifa.
-
-
-```r
-mulheres_tarifa &lt;- df_titanic %&gt;% 
-  filter(sexo == "feminino") %&gt;% 
-  summarize(
-    mediana_tarifa = median(tarifa, na.rm = TRUE)
-)
-```
 
 ---
 
@@ -2060,48 +1971,10 @@ df_titanic %&gt;%
 
 2) Criar uma tabela com a mediana da tarifa por sexo.
 
----
-
-# Desafio 6 - Resposta
-
-1) Criar uma tabela com a quantidade de pessoas por classe.
-  
-
-```r
-df_titanic %&gt;% 
-  group_by(classe) %&gt;% 
-  summarize(qtd_classe = n())
-```
-
-```
-## # A tibble: 3 x 2
-##   classe qtd_classe
-##    &lt;int&gt;      &lt;int&gt;
-## 1      1        216
-## 2      2        184
-## 3      3        491
-```
-
----
-
-# Desafio 6  - Resposta
-
-2) Criar uma tabela com a mediana da tarifa por sexo.
 
 
-```r
-df_titanic %&gt;% 
-  group_by(sexo) %&gt;% 
-  summarize(mediana_tarifa = median(tarifa, na.rm = TRUE))
-```
 
-```
-## # A tibble: 2 x 2
-##   sexo      mediana_tarifa
-##   &lt;chr&gt;              &lt;dbl&gt;
-## 1 feminino            23  
-## 2 masculino           10.5
-```
+
 
 ---
 
@@ -2144,7 +2017,7 @@ df_titanic %&gt;%
 ggplot()
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-98-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-87-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ** Exemplos passo a passo: Exemplo 1 - geom_bar **
 
@@ -2153,7 +2026,7 @@ df_titanic %&gt;%
 ggplot(aes(x=sobreviveu))
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-99-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-88-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ** Exemplos passo a passo: Exemplo 1 - geom_bar **
 
@@ -2163,7 +2036,7 @@ ggplot(aes(x=sobreviveu))+
 geom_bar()
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-100-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-89-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ** Exemplo 1 - geom_bar **
 
@@ -2173,7 +2046,7 @@ ggplot(aes(x=sobreviveu, fill=sexo))+
 geom_bar()
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-101-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-90-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ** Exemplo 1 - geom_bar **
@@ -2185,7 +2058,7 @@ geom_bar()+
   theme_bw()
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-102-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-91-1.png" style="display: block; margin: auto;" /&gt;
 ---
 
 
@@ -2202,7 +2075,7 @@ geom_bar() +
   )
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-103-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-92-1.png" style="display: block; margin: auto;" /&gt;
 ---
 
 
@@ -2219,7 +2092,7 @@ theme_bw() +
   facet_wrap(~embarque)
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-104-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-93-1.png" style="display: block; margin: auto;" /&gt;
 ---
 
 ** Exemplo - geom_boxplot**
@@ -2230,7 +2103,7 @@ ggplot(aes(x=sexo, y=idade, fill=sexo))+
 geom_boxplot()
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-105-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-94-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ** Usar dplyr + ggplot2** - Gapminder dataset
 
@@ -2268,7 +2141,7 @@ gapminder %&gt;%
   theme_bw() 
 ```
 
-&lt;img src="oficina_R_basico_respostas_files/figure-html/unnamed-chunk-107-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-96-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Futuramente: Oficina de R - Intermediário
